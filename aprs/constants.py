@@ -49,12 +49,12 @@ AX25_PROTOCOL_ID = b'\xF0'
 ADDR_INFO_DELIM = AX25_CONTROL_FIELD + AX25_PROTOCOL_ID
 
 DATA_TYPE_MAP = {
-    b'>': b'status',
-    b'!': b'position_nots_nomsg',
-    b'=': b'position_nots_msg',
-    b'T': b'telemetry',
-    b';': b'object',
-    b'`': b'old_mice'
+    '>': 'status',
+    '!': 'position_nots_nomsg',
+    '=': 'position_nots_msg',
+    'T': 'telemetry',
+    ';': 'object',
+    '`': 'old_mice'
 }
 
 # KISS Command Codes

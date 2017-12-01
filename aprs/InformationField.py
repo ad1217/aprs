@@ -35,7 +35,7 @@ class InformationField(object):
         elif isinstance(raw_data, cls):
             return raw_data
         elif isinstance(raw_data, (bytearray, bytes)):
-            data_type = b''
+            data_type = ''
             data_type_field = chr(raw_data[0])
             data_type = aprs.DATA_TYPE_MAP.get(data_type_field)
 
