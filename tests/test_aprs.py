@@ -38,7 +38,7 @@ class APRSTest(aprs_test_classes.APRSTestClass):  # pylint: disable=R0904
         )
         aprs_conn.start()
 
-        frame = aprs.parse_frame(
+        frame = aprs.Frame.parse(
             '>'.join([
                 self.fake_callsign,
                 'APRS,TCPIP*:=3745.00N/12227.00W-test_fake_good_auth'

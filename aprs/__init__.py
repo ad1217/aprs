@@ -30,11 +30,14 @@ from .geo_util import dec2dm_lat, dec2dm_lng, ambiguate  # NOQA
 
 from .fcs import FCS  # NOQA
 
-from .functions import (parse_frame, parse_callsign,   # NOQA
-                        parse_callsign_ax25, parse_info_field)
+from .Frame import Frame, PositionFrame
 
-from .classes import (Frame, Callsign, APRS, TCP, UDP, HTTP,  # NOQA
-                      InformationField, PositionFrame)
+from .Callsign import Callsign
+
+from .InformationField import InformationField
+
+from .classes import (APRS, TCP, UDP, HTTP) # NOQA
+
 
 __author__ = 'Greg Albrecht W2GMD <oss@undef.net>'  # NOQA pylint: disable=R0801
 __copyright__ = 'Copyright 2017 Greg Albrecht and Contributors'  # NOQA pylint: disable=R0801
