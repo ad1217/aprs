@@ -94,7 +94,7 @@ class Callsign(object):
 
         # 7th byte carries SSID or digi:
         seven_chunk = raw_callsign[6] & 0xFF
-        ssid = (seven_chunk >> 1) & 0x0F  # Limit it to 4 bits.
+        ssid = bytes(str((seven_chunk >> 1) & 0x0F), 'ascii')  # Limit it to 4 bits.
 
         # FIXME gba@20170809: This works for KISS frames, but not otherwise.
         # Should consult: https://github.com/chrissnell/GoBalloon/blob/master/ax25/encoder.go
