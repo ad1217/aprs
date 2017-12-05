@@ -49,13 +49,33 @@ AX25_PROTOCOL_ID = b'\xF0'
 ADDR_INFO_DELIM = AX25_CONTROL_FIELD + AX25_PROTOCOL_ID
 
 DATA_TYPE_MAP = {
-    '>': 'status',
-    '!': 'position_nots_nomsg',
-    '=': 'position_nots_msg',
-    'T': 'telemetry',
+    '\x1c': 'current_mice_beta',
+    '\x1d': 'old_mice_beta',
+    '!': 'position_nots_nomsg', # or Ultimeter 2000 WX Station
+    '#': 'peet_bros_uii_weather',
+    '$': 'raw_gps', # or Ultimeter 2000
+    '%': 'agrelo_dfjr_microfinder',
+    '&': 'reserved_map_feature',
+    "'": 'old_mice', # Current data for TM-D700
+    ')': 'item',
+    '*': 'peet_bros_uii_weather',
+    '+': 'reserved_shelter_data_with_time',
+    ',': 'invalid_or_test',
+    '.': 'reserved_space_weather',
+    '/': 'position_ts_nomsg',
+    ':': 'message',
     ';': 'object',
-    '`': 'old_mice'
-}
+    '<': 'station_capabilities',
+    '=': 'position_nots_msg',
+    '>': 'status',
+    '?': 'query',
+    '@': 'position_ts_msg',
+    'T': 'telemetry',
+    '[': 'maidenhead_beacon', # obsolete
+    '_': 'weather',
+    '`': 'current_mice', # Except in TM-D700
+    '{': 'user_defined',
+    '}': 'third_party'}
 
 # KISS Command Codes
 # http://en.wikipedia.org/wiki/KISS_(TNC)#Command_Codes
