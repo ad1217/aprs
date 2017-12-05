@@ -7,9 +7,9 @@ import logging
 import random
 import unittest
 
-from .context import aprs
+import aprs
 
-from . import constants
+import constants
 
 __author__ = 'Greg Albrecht W2GMD <oss@undef.net>'  # NOQA pylint: disable=R0801
 __copyright__ = 'Copyright 2017 Greg Albrecht and Contributors'  # NOQA pylint: disable=R0801

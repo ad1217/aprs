@@ -6,10 +6,10 @@
 import binascii
 import unittest  # pylint: disable=R0801
 
-from .context import aprs  # pylint: disable=R0801
-from .context import aprs_test_classes  # pylint: disable=R0801
+import aprs  # pylint: disable=R0801
+import aprs_test_classes  # pylint: disable=R0801
 
-from . import constants  # pylint: disable=R0801
+import constants  # pylint: disable=R0801
 
 __author__ = 'Greg Albrecht W2GMD <oss@undef.net>'  # NOQA pylint: disable=R0801
 __copyright__ = 'Copyright 2017 Greg Albrecht and Contributors'  # NOQA pylint: disable=R0801
